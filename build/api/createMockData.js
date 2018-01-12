@@ -7,6 +7,7 @@ var jsf = require('json-schema-faker');
 
 var schema = {
     type: 'object',
+    required: ['tasks'],
     properties: {
         tasks: {
             type: 'array',
