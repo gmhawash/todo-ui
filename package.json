@@ -11,7 +11,7 @@
     "create-mock-data": "node build/api/createMockData.js",
     "prestart-mockapi": "npm run create-mock-data",
     "start-mockapi": "./node_modules/.bin/json-server --watch build/api/db.json --port 3000",
-    "live-server": "./node_modules/.bin/live-server src --mount=/axios:node_modules/axios/dist --mount=/vue:node_modules/vue/dist --mount=/bulma:node_modules/bulma/css",
+    "live-server": "./node_modules/.bin/live-server src --mount=/axios:node_modules/axios/dist --mount=/vue:node_modules/vue/dist --mount=/bulma:node_modules/bulma/css --proxy=/tasks:http://localhost:3000/tasks",
     "start": "npm-run-all --parallel start-mockapi live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
